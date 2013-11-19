@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" type="text/css">
+<title>HTML 5 complete</title>
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+<style>
+article, aside, details, figcaption, figure, footer,header,
+hgroup, menu, nav, section { display: block; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after, div:before, div:after, header:before, header:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end od Meyer`s css reset */
+
+
+* {box-sizing: border-box;}
+body {
+	font: 12px/18px "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background: #f7f4ef;
+	color: #555;
+}
+
+h1 {font-size:32px; font: 32px/48px "Source Sans Pro", "Helvetica Neue", sans-serif;}
+
+img {
+   max-width: 100%;
+   height: auto;
+   width: auto\9; /* ie8 */
+}
+
+
+header {
+	width: 242px;
+	border-right: 1px solid #DDD;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	padding-top:38px;
+}
+
+header aside {
+	text-align:center;
+}
+
+#container {
+	margin-left: 243px;
+	position: relative;
+	background-color:#fff;
+}
+
+.thumb {
+	width:33.3%;
+	max-width:450px;
+	float:left;
+	height:200px;
+	/*border:1px dotted black;*/
+}
+
+.thumb:hover {
+	background-color:#f754e1;
+}
+
+#sidebar-footer {
+	bottom: 38px;
+	position: absolute;
+	width: 200px;
+	padding: 0;
+	text-align:center;
+	padding-left:40px;
+}
+
+#sidebar-footer a {
+	display:block;
+	float:left;
+	padding:8px;
+	margin-right:8px;
+	text-decoration:none;
+	background-color:#ccc;
+}
+#sidebar-footer a:hover {
+	background-color:#ff0033;
+	color:#fff;
+}
+
+
+
+@media screen and (max-width: 860px) {
+	.thumb {width:50%}
+}
+
+
+@media screen and (max-width: 650px) {
+	header {
+		width: 100%;
+		height:200px;
+		position:relative;
+		border-right:0;
+		border-bottom:1px solid #ddd;
+	}
+	
+	#container {
+		margin-left: 0;
+		position: relative;
+		background-color:#fff;
+	}
+	
+	.thumb {width:50%}
+}
+
+
+</style>
+</head>
+<body>
+
+<header>
+<div>
+  <aside>
+	<h1>Мария<br />Дейнеко</h1>
+    <h3><a href="mailto:#">@maria</a></h3>
+    <p>Phone.</p>
+  </aside>
+</div>
+    <nav role="navigation"></nav>
+	<div id="sidebar-footer"><a href="#">Fb</a><a href="#">Vk</a><a href="#">Pi</a><a href="#">Li</a></div>
+</header>
+
+<div id="container">
+	<div id="content">
+		<div class="thumb"></div><div class="thumb"></div><div class="thumb"></div><div class="thumb"></div>
+		<div class="thumb"></div><div class="thumb"></div><div class="thumb"></div><div class="thumb"></div>
+		<div class="thumb"></div><div class="thumb"></div><div class="thumb"></div><div class="thumb"></div>
+		<div class="thumb"></div><div class="thumb"></div><div class="thumb"></div><div class="thumb"></div>
+		<div class="thumb"></div><div class="thumb"></div><div class="thumb"></div><div class="thumb"></div>
+		<div class="thumb"></div><div class="thumb"></div><div class="thumb"></div><div class="thumb"></div>
+	</div>
+</div>
+
+<script>
+</script>
+
+</body>
+</html>
