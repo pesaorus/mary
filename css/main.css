@@ -1,0 +1,150 @@
+article, aside, details, figcaption, figure, footer,header,
+hgroup, menu, nav, section { display: block; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after, div:before, div:after, header:before, header:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* end of Meyer`s css reset */
+
+
+* {box-sizing: border-box;}
+body {
+    font: 12px/18px "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #f7f4ef;
+    color: #555;
+}
+
+h1 {font-size:32px; font: 32px/48px "Source Sans Pro", "Helvetica Neue", sans-serif;}
+
+.logo {background: url('../images/title.png') no-repeat 50% 50%; width:100%; height:64px;}
+
+img {
+   max-width: 100%;
+   height: auto;
+   width: auto\9; /* ie8 */
+}
+
+header {
+    width: 258px;
+    /*border-right: 1px solid #DDD;*/
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    padding-top: 38px;
+    background: #4b3b58;
+}
+
+header aside {
+    text-align:center;
+}
+
+#container {
+    margin-left: 258px;
+    position: relative;
+    background-color:#fff;
+}
+
+.thumb {
+    width:33.3%;
+    max-width:450px;
+    float:left;
+    height:200px;
+    /*border:1px dotted black;*/
+}
+
+.thumb:hover {
+    background-color:#f754e1;
+}
+
+#sidebar-footer {
+    bottom: 38px;
+    position: absolute;
+    width: 200px;
+    padding: 0;
+    text-align:center;
+    padding-left:40px;
+}
+
+#sidebar-footer a {
+    display:block;
+    float:left;
+    margin-right:8px;
+    text-decoration:none;
+}
+
+.be, .fb, .linkedin, .mail {width:31px; height:30px;}
+.be {background: url('../images/social-icons/behance_icon.jpg') no-repeat;}
+.fb {background: url('../images/social-icons/fb_icon.jpg') no-repeat;}
+.linkedin {background: url('../images/social-icons/linkin_icon.jpg') no-repeat;}
+.mail {background: url('../images/social-icons/mail_icon.jpg') no-repeat;}
+
+
+
+@media screen and (max-width: 860px) {
+    .thumb {width:50%}
+}
+
+
+@media screen and (max-width: 650px) {
+    header {
+        width: 100%;
+        height:200px;
+        position:relative;
+        border-right:0;
+        border-bottom:1px solid #ddd;
+    }
+    
+    #container {
+        margin-left: 0;
+        position: relative;
+        background-color:#fff;
+    }
+    
+    .thumb {width:50%}
+}
+
