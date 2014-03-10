@@ -6,15 +6,28 @@ requirejs.config({
 
     paths: {
         jquery: 'libs/jquery.2.1.0.min',
-        underscore: 'underscore1.6.0.min',
-        backbone: 'backbone.min'
+        underscore: 'libs/underscore1.6.0.min',
+        backbone: 'libs/backbone.min',
+        /* Application router */
+        router: './router'
     }
 });
 
 
+
+/**
+ * Main App module
+ * 
+ */
 require(
-    ['jquery'],
-    function( $ ){
-        console.log( 'It works!' );
+    [
+        'jquery',
+        'router'
+    ],
+    function( $, router ) {
+
+        console.log( 'Application work\'s' );
+        router.initialize();
+
     }
 );
