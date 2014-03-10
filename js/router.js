@@ -20,14 +20,14 @@ define(
     		'project/:id': 'showProject',
 
     		/* Default route */
-    		'*actions': 'default'
+    		'*actions': 'defaultRoute'
     	},
 
     	showProject: function( id ) {
     		console.log( 'Client calls to show ', id );
     	},
 
-    	default: function( actions ) {
+    	defaultRoute: function( actions ) {
     		console.log( 'Default route' );
     	}
   	});
