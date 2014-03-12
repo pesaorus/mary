@@ -6,10 +6,12 @@ define(
   /* Router dependencies */
   [
     'underscore',
-    'backbone'
+    'jquery',
+    'backbone',
+    'views/about/aboutview'
   ],
 
-  function( _, Backbone ) {
+  function( _, $, Backbone, AboutView ) {
 
   /** 
    * Backbone router @constructor 
@@ -38,6 +40,7 @@ define(
       },
 
       showAbout: function() {
+        aboutView.render();
         console.log( 'About' );
       },
 

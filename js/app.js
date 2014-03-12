@@ -22,11 +22,15 @@ requirejs.config({
 require(
     [
         'jquery',
+        'views/about/aboutview',
         'router'
     ],
-    function( $, router ) {
+    function( $, AboutView, router ) {
 
         console.log( 'Application work\'s' );
+
+        window.aboutView = new AboutView;
+        
         router.initialize();
 
     }
