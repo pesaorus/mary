@@ -54,7 +54,7 @@ table {
 
 * {box-sizing: border-box;}
 body {
-    font: 13pt/18px "Tahoma", Helvetica, Arial, sans-serif;
+    font: 9pt/11pt "Tahoma", Helvetica, Arial, sans-serif;
     font-weight: lighter;
     background: #f7f4ef;
     color: #555;
@@ -92,7 +92,7 @@ header {
 }
 
 nav li {
-    border-bottom: 1px dotted white;
+    border-bottom: 1px dashed white;
     padding: 10px 10px 10px 40px;
     letter-spacing: 3px;
     text-transform: uppercase;
