@@ -3,51 +3,65 @@
  */
 
 define(
-	/* Router dependencies */
-	[
-		'underscore',
-		'backbone'
-	], 
+  /* Router dependencies */
+  [
+    'underscore',
+    'backbone'
+  ],
 
-	function( _, Backbone ) {
+  function( _, Backbone ) {
 
-	/** 
-	 * Backbone router @constructor 
-	 */ 
-	var MaryRouter = Backbone.Router.extend({
-    	routes: {
-    		/* Route to show current project */
-    		'project/:id': 'showProject',
+  /** 
+   * Backbone router @constructor 
+   */
+  var MaryRouter = Backbone.Router.extend({
+      routes: {
+        /* Route to show current project */
+        'project/:id(/)': 'showProject',
 
-    		/* Default route */
-    		'*actions': 'defaultRoute'
-    	},
+        /* Contacts route */
+        'contact(/)': 'showContacts',
 
-    	showProject: function( id ) {
-    		console.log( 'Client calls to show ', id );
-    	},
+        /* About route */
+        'about(/)': 'showAbout',
 
-    	defaultRoute: function( actions ) {
-    		console.log( 'Default route' );
-    	}
-  	});
+        /* Default route */
+        '*actions': 'defaultRoute'
+      },
 
-	/**
-	 * @public
-	 */
-	var initialize = function() {
-  		/* New router */
-    	var maryRouter = new MaryRouter;
+      showProject: function( id ) {
+        console.log( 'Client calls to show ', id );
+      },
 
-    	console.log( 'Router is created.' ); 
+      showContacts: function() {
+        console.log( 'Contacts' );
+      },
 
-    	Backbone.history.start();
+      showAbout: function() {
+        console.log( 'About' );
+      },
 
-  	};
+      defaultRoute: function( actions ) {
+        console.log( 'Default route' );
+      }
+    });
 
-	/* Public, router initialisation */
-  	return {
-    	initialize: initialize
-  	};
+  /**
+   * @public
+   */
+  var initialize = function() {
+      /* New router */
+      var maryRouter = new MaryRouter;
+
+      console.log( 'Router is created.' );
+
+      Backbone.history.start();
+
+    };
+
+  /* Public, router initialisation */
+    return {
+      initialize: initialize
+    };
 
 });
