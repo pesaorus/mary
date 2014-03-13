@@ -36,15 +36,17 @@ define(
       },
 
       showContacts: function() {
+        App.views.contactsView.render();
         console.log( 'Contacts' );
       },
 
       showAbout: function() {
-        aboutView.render();
+        App.views.aboutView.render();
         console.log( 'About' );
       },
 
       defaultRoute: function( actions ) {
+        App.views.projectsListView.render();
         console.log( 'Default route' );
       }
     });
@@ -55,7 +57,7 @@ define(
   var initialize = function() {
       /* New router */
       var maryRouter = new MaryRouter;
-
+      
       console.log( 'Router is created.' );
 
       Backbone.history.start();

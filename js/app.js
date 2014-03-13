@@ -23,14 +23,30 @@ require(
     [
         'jquery',
         'views/about/aboutview',
+        'views/contacts/contactsview',
+        'views/projects/projectslistview',
+        'views/mainnavigation',
         'router'
     ],
-    function( $, AboutView, router ) {
+    function( $, aboutView, contactsView, projectsListView, mainNavigation, router ) {
+
+        /**
+         * New Application namespace
+         */
+        window.App = {
+            models: {},
+            views: {},
+            collections: {}
+        };
+
+        App.views.projectsListView = projectsListView;
+        App.views.aboutView = aboutView;
+        App.views.contactsView = contactsView;
+
+        App.views.mainNavigation = mainNavigation;
 
         console.log( 'Application work\'s' );
 
-        window.aboutView = new AboutView;
-        
         router.initialize();
 
     }

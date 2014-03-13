@@ -1,5 +1,5 @@
 /**
- * About paje view.
+ * Contacts paje view.
  */
 define(
     [
@@ -10,7 +10,7 @@ define(
 
     function( _, $, Backbone ) {
 
-        var AboutView = Backbone.View.extend({
+        var ContactsView = Backbone.View.extend({
             /* View container */
             el: $('#content'),
 
@@ -18,11 +18,11 @@ define(
             render: function() {
 
                 var data = {},
-                    $compiledTemplate = $('<h1 style="display:none">About</h1>'); //_.template( projectListTemplate, data );
-                // Append our compiled template to this Views "el"
+                    $compiledTemplate = $('<h1 style="display:none">Contacts</h1>'); //_.template( projectListTemplate, data );
+
                 this.$el.html( $compiledTemplate.show() );
             }
         });
 
-        return new AboutView;
+        return new ContactsView;
 });
