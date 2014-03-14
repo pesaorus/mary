@@ -54,13 +54,20 @@ table {
 
 * {box-sizing: border-box;}
 body {
-    font: 9pt/11pt "Tahoma", Helvetica, Arial, sans-serif;
+    font: 12pt/18pt "Helvetica Neue", Helvetica, Tahoma, sans-serif;
     font-weight: lighter;
-    background: #f7f4ef;
     color: #555;
 }
 
+.project-slider, body {
+    background: #f7f4ef;
+}
+
+a {text-decoration: none; color: inherit;}
+
 h1 {font-size:32px; font: 32px/48px "Source Sans Pro", "Helvetica Neue", sans-serif;}
+h2 {font-size: 24px}
+h3 {font-weight: bold;}
 
 .logo {
     background: url('../images/title.png') no-repeat 50% 50%; 
@@ -92,7 +99,7 @@ header {
 }
 
 nav li {
-    border-bottom: 1px dashed white;
+    /*border-bottom: 1px dashed white;*/
     padding: 10px 10px 10px 40px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -106,7 +113,9 @@ nav li {
 
 .menu__item {
     color: white;
-    text-decoration: none
+    text-decoration: none;
+    display: block;
+    font-size: 9pt;
 }
 
 #container {
@@ -120,7 +129,8 @@ nav li {
     width:33.3%;
     max-width:450px;
     float:left;
-    height:200px;
+    height:228px;
+    text-align: center;
     /*border:1px dotted black;*/
 }
 
@@ -128,27 +138,40 @@ nav li {
     background-color:#f754e1;
 }
 
+.thumb:hover .thumb-text {
+    opacity: 0.8;
+}
+
+.thumb-text {
+    margin: 0 auto;
+    padding:40px 20px;
+    background: #0ca2c3;
+    opacity: 0;
+    width:100%; height:100%;
+    transition: opacity .4s ease-out;
+}
+
 #sidebar-footer {
     bottom: 38px;
     position: absolute;
-    width: 200px;
+    width: 320px;
     padding: 0;
     text-align:center;
     padding-left:40px;
 }
 
+/* social links */
 #sidebar-footer a {
-    display:block;
-    float:left;
-    margin-right:8px;
-    text-decoration:none;
+    display: block;
+    float: left;
+    margin-right: 15px;
+    text-decoration: none;
 }
-
-.be, .fb, .linkedin, .mail {width:31px; height:30px;}
-.be {background: url('../images/social-icons/behance_icon.jpg') no-repeat;}
-.fb {background: url('../images/social-icons/fb_icon.jpg') no-repeat;}
-.linkedin {background: url('../images/social-icons/linkin_icon.jpg') no-repeat;}
-.mail {background: url('../images/social-icons/mail_icon.jpg') no-repeat;}
+.be, .fb, .linkedin, .mail {width:30px; height:30px;}
+.be {background: url('../images/social-icons/Behance_icon.png') no-repeat;}
+.fb {background: url('../images/social-icons/Facebook_icon.png') no-repeat;}
+.linkedin {background: url('../images/social-icons/Linkedin_icon.png') no-repeat;}
+.mail {background: url('../images/social-icons/Mail_icon.png') no-repeat;}
 
 
 
