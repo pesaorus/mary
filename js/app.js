@@ -4,6 +4,12 @@
 requirejs.config({
     baseUrl: 'js/',
 
+    shim: {
+        'handlebars': {
+            exports: 'Handlebars'
+        }
+    },
+
     paths: {
         jquery: 'libs/jquery.2.1.0.min',
         underscore: 'libs/underscore1.6.0.min',

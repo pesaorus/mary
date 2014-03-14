@@ -36,7 +36,7 @@ define(
         App.views.mainNavigation.selectRoutedMenuItem( $currentMenuItem );
 
         if (!App.views.projects[ id ]) {
-          console.log( App.models[ id - 1 ] );
+          /* Getting project by array index is just a temporary solution */
           App.views.projects[ id ] = new ProjectView( { model: new ProjectModel(App.models[ id - 1 ]) } );
         }
 
