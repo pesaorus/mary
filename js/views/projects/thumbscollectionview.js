@@ -26,7 +26,6 @@ define(
                     this.shown = true;
                 }
 
-
                 App.elements.$contentContainer.html( this.$el );
     		},
 

@@ -22,16 +22,16 @@ define(
     			}
     		},
 
+            template: Handlebars.compile( thumbViewTpl ),
+
     		render: function() {
-    			var template = Handlebars.compile( thumbViewTpl ),
-                    data = {
+    			var data = {
                         id: this.model.get('id'),
                         thumbTitle: this.model.get('thumbTitle'),
                         thumbText: this.model.get('thumbText')
                     };
-    			this.$el.html( template(data) );
+    			this.$el.html( this.template(data) );
 
-    			console.log( 'Thumb rendered', this.$el );
     			return this;
     		}
     	});

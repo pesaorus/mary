@@ -34,13 +34,13 @@ define(
       showProject: function( id ) {
         var $currentMenuItem = $( App.views.mainNavigation.$menuItems[ 0 ] );
         App.views.mainNavigation.selectRoutedMenuItem( $currentMenuItem );
-        
-        /* Getting project by array index is just a temporary solution */
+
+        /**
+         * Getting project by array index is just a temporary solution.
+         * TODO: add templates cashing.
+         */
         App.views.projects[ id ] = new ProjectView( { model: new ProjectModel(App.models[ id - 1 ]) } );
-
         App.views.projects[ id ].render();
-
-        console.log( 'Client calls to show ', id );
       },
 
       showContacts: function() {
@@ -48,8 +48,6 @@ define(
 
         App.views.contactsView.render();
         App.views.mainNavigation.selectRoutedMenuItem( $currentMenuItem );
-
-        console.log( 'Contacts' );
       },
 
       showAbout: function() {
@@ -57,7 +55,6 @@ define(
         App.views.mainNavigation.selectRoutedMenuItem( $currentMenuItem );
 
         App.views.aboutView.render();
-        console.log( 'About' );
       },
 
       defaultRoute: function( actions ) {
@@ -65,7 +62,6 @@ define(
         App.views.mainNavigation.selectRoutedMenuItem( $currentMenuItem );
 
         App.views.thumbCollectionView.render();
-        console.log( 'Default route' );
       }
     });
 
@@ -75,11 +71,7 @@ define(
   var initialize = function() {
       /* New router */
       var maryRouter = new MaryRouter;
-      
-      console.log( 'Router is created.' );
-
       Backbone.history.start();
-
     };
 
   /* Public, router initialisation */
