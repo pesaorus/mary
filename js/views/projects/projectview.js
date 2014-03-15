@@ -41,6 +41,14 @@ define(
                 this.$currtntImageIndexContainer = $('.current-index');
                 this.$scrollLeftContainer = $('.scroll-left');
                 this.$scrollRightContainer = $('.scroll-right');
+
+                /**
+                 * Left scroll arrow initialization
+                 */
+                this.$scrollLeftContainer.css({
+                    opacity: 0.3
+                });
+
     			return this;
     		},
 
@@ -49,7 +57,8 @@ define(
                 'click .js-prev-image': 'scrollFullViewToTheLeft',
 
                 'click .scroll-right': 'scrollFullViewToTheRight',
-                'click .js-next-image': 'scrollFullViewToTheRight'
+                'click .js-next-image': 'scrollFullViewToTheRight',
+                'click .full-view-container': 'scrollFullViewToTheRight'
             },
 
             scrollFullViewToTheLeft: function(e) {
