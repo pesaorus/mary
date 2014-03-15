@@ -11,14 +11,14 @@ define(
     ],
 
     function( _, $, Backbone, Handlebars, projectViewTpl ) {
-    	var ProjectView = Backbone.View.extend({
-    		tagName: 'div',
-    		className: 'project-slider',
+        var ProjectView = Backbone.View.extend({
+            tagName: 'div',
+            className: 'project-slider',
 
             template: Handlebars.compile( projectViewTpl ),
             currentImageIndex: 1,
 
-    		render: function() { 
+            render: function() { 
 
                 var imagesCount = this.model.get('imagesList').length,
                     data = {
@@ -35,9 +35,9 @@ define(
                         currentIndex: '01'
                     };
 
-    			this.$el.html( this.template(data) );
+                this.$el.html( this.template(data) );
 
-    			App.elements.$contentContainer.html( this.$el );
+                App.elements.$contentContainer.html( this.$el );
                 this.$currtntImageIndexContainer = $('.current-index');
                 this.$scrollLeftContainer = $('.scroll-left');
                 this.$scrollRightContainer = $('.scroll-right');
@@ -49,8 +49,8 @@ define(
                     opacity: 0.3
                 });
 
-    			return this;
-    		},
+                return this;
+            },
 
             events: {
                 'click .scroll-left': 'scrollFullViewToTheLeft',
@@ -130,7 +130,7 @@ define(
                 this.$currtntImageIndexContainer.html( newIndexText );
             }
 
-    	});
+        });
 
-    	return ProjectView;
+        return ProjectView;
     });

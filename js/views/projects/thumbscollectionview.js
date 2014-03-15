@@ -11,11 +11,11 @@ define(
     ],
 
     function( _, $, Backbone, ThumbView, ThumbsCollection ) {
-    	var ThumbsListView = Backbone.View.extend({
-    		tagName: 'div',
-    		className: 'projects-list',
+        var ThumbsListView = Backbone.View.extend({
+            tagName: 'div',
+            className: 'projects-list',
 
-    		render: function() {
+            render: function() {
                 var self = this;
 
                 if (!this.shown) {
@@ -27,7 +27,7 @@ define(
                 }
 
                 App.elements.$contentContainer.html( this.$el );
-    		},
+            },
 
             shown: false,
 
@@ -48,7 +48,7 @@ define(
             initialize: function() {
                 this.collection = new ThumbsCollection( App.models );
             }
-    	});
+        });
 
-    	return ThumbsListView;
+        return ThumbsListView;
     });
