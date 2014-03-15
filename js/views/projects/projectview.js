@@ -81,7 +81,7 @@ define(
                             .addClass('visible');
 
                     this.currentImageIndex--;
-                    this.setNewCurrentIndex( this.currentImageIndex );
+                    this.renderNewCurrentIndex( this.currentImageIndex );
 
                     if ( !$currentImage.prev().prev().length ) {
                         this.$scrollLeftContainer.css({
@@ -112,7 +112,7 @@ define(
                             .removeClass('hidden')
                             .addClass('visible');
                     this.currentImageIndex++;
-                    this.setNewCurrentIndex( this.currentImageIndex );
+                    this.renderNewCurrentIndex( this.currentImageIndex );
 
                     if ( !$currentImage.next().next().length ) {
                         this.$scrollRightContainer.css({
@@ -124,7 +124,7 @@ define(
                 e.preventDefault();
             },
 
-            setNewCurrentIndex: function( index ) {
+            renderNewCurrentIndex: function( index ) {
                 console.log( 'New index', index );
                 var newIndexText = index < 10 ? '0' + index : index;
                 this.$currtntImageIndexContainer.html( newIndexText );
