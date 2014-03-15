@@ -6,31 +6,30 @@ define(
         'underscore',
         'jquery',
         'backbone',
-        'handlebars'
-        //'text!views/projects/thumb-text.hbs'
+        'handlebars',
+        'text!views/thumb-text.hbs'
     ],
 
-    function( _, $, Backbone, Handlebars/*, thumbViewTpl*/ ) {
+    function( _, $, Backbone, Handlebars, thumbViewTpl) {
     	var ThumbView = Backbone.View.extend({
     		tagName: 'div',
     		className: 'thumb project',
 
     		attributes: function() {
-    			var bgImage = 'background-image: url(\'' +  this.model.get('imagePreview') + '\')';
+    			var bgImage = 'background: url(\'' +  this.model.get('imagePreview') + '\') no-repeat 50% top';
     			return {
     				style: bgImage
     			}
     		},
 
     		render: function() {
-    			//var template = Handlebars.compile( thumbViewTpl.html() );
-    			this.$el.html( '<a href="#/project/' + 
-    					this.model.get('id') + 
-    					'"><div class="thumb-text"><h3>' + 
-    					this.model.get('title') + '</h3>' + 
-    					this.model.get('textShort') + '</div></a>' );
-
-    			//this.$el.html( JSON.stringify( this.model ) );
+    			var template = Handlebars.compile( thumbViewTpl ),
+                    data = {
+                        id: this.model.get('id'),
+                        thumbTitle: this.model.get('thumbTitle'),
+                        thumbText: this.model.get('thumbText')
+                    };
+    			this.$el.html( template(data) );
 
     			console.log( 'Thumb rendered', this.$el );
     			return this;

@@ -34,11 +34,9 @@ define(
       showProject: function( id ) {
         var $currentMenuItem = $( App.views.mainNavigation.$menuItems[ 0 ] );
         App.views.mainNavigation.selectRoutedMenuItem( $currentMenuItem );
-
-        if (!App.views.projects[ id ]) {
-          /* Getting project by array index is just a temporary solution */
-          App.views.projects[ id ] = new ProjectView( { model: new ProjectModel(App.models[ id - 1 ]) } );
-        }
+        
+        /* Getting project by array index is just a temporary solution */
+        App.views.projects[ id ] = new ProjectView( { model: new ProjectModel(App.models[ id - 1 ]) } );
 
         App.views.projects[ id ].render();
 

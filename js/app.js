@@ -22,6 +22,7 @@ requirejs.config({
 
 
 
+
 /**
  * Main App module
  * 
@@ -49,38 +50,52 @@ require(
             elements: {}
         };
 
+        /**
+         * Main content container.
+         * All pages will be placed inside it.
+         */
         App.elements.$contentContainer = $('#content');
-        App.models = [
-            {
-                id: 1,
-                imagePreview: 'images/projects/Sber_prew.png',
-                title: 'First image',
-                textShort: 'First project with 25 images inside'
-            },
-            {
-                id: 2,
-                imagePreview: 'images/projects/Sber_prew.png',
-                title: 'Second image',
-                textShort: 'Second project with 25 images inside'
-            },
-            {
-                id: 3,
-                imagePreview: 'images/projects/Sber_prew.png',
-                title: 'Third image',
-                textShort: 'Third project with 25 images inside'
-            },
-        ];
+        console.log('34');
+        /**
+         * All data (models) to draw main page
+         * is stored in 'js/gallerydata.json' file.
+         * We will place it in App.models object.
+         */
+        $.get('js/gallerydata.json', function(data) {
+            var id = 1;
+            App.models = data.data;
 
-        //App.views.projectsListView = projectsListView;
-        App.views.aboutView = aboutView;
-        App.views.contactsView = contactsView;
-        App.views.thumbCollectionView = new ThumbCollectionView;
+            /**
+             * We will manually update models ids.
+             */
+            $.each(App.models, function() {
+                this.id = id;
+                id++;
+            })
 
-        App.views.mainNavigation = mainNavigation;
+        }).then(function() {
 
-        console.log( 'Application work\'s' );
+            /**
+             * Static views.
+             */
+            App.views.aboutView = aboutView;
+            App.views.contactsView = contactsView;
+            App.views.mainNavigation = mainNavigation;
 
-        router.initialize();
+            /**
+             * Creating thumbnailc collection.
+             */
+            App.views.thumbCollectionView = new ThumbCollectionView;
+
+            /**
+             * Router initialization.
+             */
+            router.initialize();
+
+        });
+ 
+
+        
 
     }
 );

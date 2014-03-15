@@ -11,9 +11,9 @@ define(
 		var ProjectThumb = Backbone.Model.extend({
 				defaults: {
 					id: 0,
-			        imagePreview: 'images/projects/Sber_prew.png',
-			        title: 'No title',
-			        textShort: 'No text'
+			        imagePreview: 'images/projects/sber/Sber_prew.png',
+			        thumbTitle: 'No title',
+			        thumbText: 'No text'
 			    }
 			});
 

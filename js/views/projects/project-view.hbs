@@ -1,0 +1,33 @@
+<div class="project-full-view">
+	<div class="full-view-container">
+		<ul>
+			<li class="visible"><img src="{{firstImage}}" alt="" class="full-view-image"></li>
+		{{#each imagesExeptFirst}}
+			<li class="hidden"><img src="{{this}}" class="full-view-image"></li>
+		{{/each}}
+		</ul>
+	</div>
+	<div class="scroller">
+		<div class="scroll-left">
+			<img src="images/controls/scroll-left.png" alt="">
+		</div>
+		<div class="current-index">{{currentIndex}}</div>
+		<div class="total-images-count">/&nbsp;&nbsp;{{totalImagesCount}}</div>
+		<div class="scroll-right">
+			<img src="images/controls/scroll-right.png" alt="">
+		</div>
+	</div>
+</div>
+<div class="project-legend clearfix">
+	<div class="grid-left">
+		<h2 class="upper"><b>{{title}}</b></h2>
+		<p>{{tags}}</p>
+	</div>
+	<div class="grid-right">
+		<p>{{text}}</p>
+		<p><b>Made under:</b><br>{{tools}}</p>
+		<div class="top-stroked">
+			<a href="#" class="back">Back</a>|<a href="" class="prev-image js-prev-image">Previous</a>|<a href="" class="next-image js-next-image">Next</a>
+		</div>
+	</div>
+</div>

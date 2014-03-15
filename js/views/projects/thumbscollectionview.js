@@ -48,7 +48,6 @@ define(
 
             initialize: function() {
                 this.collection = new ThumbsCollection( App.models );
-                //this.render();
             }
     	});
 

@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
+u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
@@ -65,14 +65,14 @@ body {
 
 a {text-decoration: none; color: inherit;}
 
-h1 {font-size:32px; font: 32px/48px "Source Sans Pro", "Helvetica Neue", sans-serif;}
-h2 {font-size: 24px}
+h1 {font-size: 32px; font: 32px/48px "Source Sans Pro", "Helvetica Neue", sans-serif;}
+h2 {font-size: 18px}
 h3 {font-weight: bold;}
 
 .logo {
     background: url('../images/title.png') no-repeat 50% 50%; 
     width:100%; height:64px;
-    margin:53px auto 40px auto; 
+    margin:53px auto 30px auto; 
 }
 
 img {
@@ -82,7 +82,7 @@ img {
 }
 
 header {
-    width: 320px;
+    width: 300px;
     /*border-right: 1px solid #DDD;*/
     position: fixed;
     top: 0;
@@ -99,16 +99,34 @@ header {
 }
 
 nav li {
-    /*border-bottom: 1px dashed white;*/
-    padding: 10px 10px 10px 40px;
+    border-bottom: 1px dashed white;
+    
+    padding: 10px 10px 10px 30px;
     letter-spacing: 3px;
     text-transform: uppercase;
+
+    /* to hide dashed active navigation border */
+    margin-top:-1px;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.clearfix:after {
+    content:'';
+    clear:both;
+}
+
+.first {
+    border-top: 1px dashed white;
 }
 
 .current {
     font-weight: normal;
     background: #0ca2c3;
-    border: none;
+    border: 1px solid transparent;
+    margin-top:-1px;
 }
 
 .menu__item {
@@ -119,7 +137,7 @@ nav li {
 }
 
 #container {
-    margin-left: 320px;
+    margin-left: 300px;
     position: relative;
     background-color:#fff;
     z-index:1;
@@ -129,35 +147,46 @@ nav li {
     width:33.3%;
     max-width:450px;
     float:left;
+    position: relative;
     height:228px;
     text-align: center;
     /*border:1px dotted black;*/
 }
 
-.thumb:hover {
-    background-color:#f754e1;
+
+
+.thumb:hover .thumb-background {
+    opacity: 0.7;
+}
+.thumb:hover .thumb-text {
+    opacity: 1;
+}
+.thumb-background, .thumb-text {
+    margin: 0 auto;
+    padding:50px 20px;
+    opacity: 0;
+    width:100%; height:100%;
+    transition: opacity .4s ease-out; 
 }
 
-.thumb:hover .thumb-text {
-    opacity: 0.8;
+.thumb-background {
+    background: #0ca2c3;
 }
 
 .thumb-text {
-    margin: 0 auto;
-    padding:40px 20px;
-    background: #0ca2c3;
-    opacity: 0;
-    width:100%; height:100%;
-    transition: opacity .4s ease-out;
+    background: none;
+    position:absolute;
+    top:0; left:0;
+    color: white;
 }
 
 #sidebar-footer {
     bottom: 38px;
     position: absolute;
-    width: 320px;
+    width: 300px;
     padding: 0;
     text-align:center;
-    padding-left:40px;
+    padding-left:30px;
 }
 
 /* social links */
@@ -173,8 +202,91 @@ nav li {
 .linkedin {background: url('../images/social-icons/Linkedin_icon.png') no-repeat;}
 .mail {background: url('../images/social-icons/Mail_icon.png') no-repeat;}
 
+.project-full-view {
+    position: relative;
+}
+
+.scroller {
+    position: absolute;
+    right:40px; bottom: 40px;
+    min-width: 150px;
+}
+
+.scroll-left, .scroll-right, .current-index, .total-images-count {
+    display: inline-block;
+    color: #ebeff2;
+}
+
+.scroll-left {
+    width:50px;
+}
+
+.scroll-right {
+    width: 50px;
+    text-align: right;
+}
+
+.current-index {
+    font-size: 52px;
+    padding-bottom:8px;
+    position: relative;
+    top:-6px;
+}
+
+.project-legend {
+    padding: 40px;
+}
+
+.hidden {
+    display:none;
+}
+
+.total-images-count {
+    position: relative;
+    top:-30px;
+}
+
+.full-view-container {
+    overflow: hidden;
+}
+
+.grid-left {
+    float:left;
+    width:300px;
+}
+
+.grid-right {
+    float:left;
+    width:480px;
+}
+
+.top-stroked {
+    margin-top:20px;
+    border-top: 1px dashed #6c3584;
+    padding-top: 20px;
+}
+
+.back {
+    padding-left: 20px;
+    margin-right: 10px;
+    background: url('../images/controls/Back_icon.png') no-repeat left 4px;
+}
+.prev-image {
+    padding-left: 20px;
+    margin: 0 10px 0 10px;
+    background: url('../images/controls/Previous_icon.png') no-repeat left 4px;
+}
+.next-image {
+    padding-right: 20px;
+    margin-left: 10px;
+    background: url('../images/controls/Next_icon.png') no-repeat right 4px;
+}
 
 
+
+
+
+/*  medis screen part */
 @media screen and (max-width: 860px) {
     .thumb {width:50%}
 }
@@ -189,6 +301,11 @@ nav li {
         border-bottom:1px solid #ddd;
     }
     
+    .logo {
+        margin-top:0;
+        margin-bottom:20px;
+    }
+
     #container {
         margin-left: 0;
         position: relative;
@@ -196,5 +313,31 @@ nav li {
     }
     
     .thumb {width:50%}
+
+    nav, #sidebar-footer {
+        text-align:center; 
+        width: 100%;
+        float: none;
+    }
+
+    nav ul {width: 240px; margin:0 auto;}
+
+    nav li {
+        border: none;
+        float:left;
+        padding: 10px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+
+        margin-top:-1px;
+    }
+
+    .first {border:none;}
+
+    #sidebar-footer {
+        margin-bottom: -20px;
+    }
+
+    .social-links {width:180px; margin:0 auto;}
 }
 
