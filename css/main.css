@@ -253,6 +253,7 @@ nav li {
 .grid-left {
     float:left;
     width:300px;
+    margin-bottom:20px;
 }
 
 .grid-right {
@@ -282,7 +283,7 @@ nav li {
     background: url('../images/controls/Next_icon.png') no-repeat right 4px;
 }
 
-
+.mbottom {margin-bottom: 20px;}
 
 
 
