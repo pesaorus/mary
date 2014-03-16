@@ -38,7 +38,7 @@ require(
          * New Application namespace
          */
         window.App = {
-            models: [],
+            models: {},
             views: {
                 projects: {}
             },
@@ -51,23 +51,29 @@ require(
          * All pages will be placed inside it.
          */
         App.elements.$contentContainer = $('#content');
-        console.log('34');
+
+        /**
+         * Method to get model by id.
+         * @param  {Number} id - model id.
+         * @return {Onject} - model.
+         */
+        App.models.getModel = function( id ) {
+            var idToReturn = id,
+                modelToReturn =  _.find( App.models.modelsCollection, function( model ) {
+                    return model.id === idToReturn;
+                });
+
+            return modelToReturn;
+        }
+
         /**
          * All data (models) to draw main page
          * is stored in 'js/gallerydata.json' file.
          * We will place it in App.models object.
          */
-        $.get('js/gallerydata.json', function(data) {
-            var id = 1;
-            App.models = data.data;
+        $.get('js/gallerydata.json', function(resp) {
 
-            /**
-             * We will manually update models ids.
-             */
-            $.each(App.models, function() {
-                this.id = id;
-                id++;
-            })
+            App.models.modelsCollection = resp.data;
 
         }).then(function() {
 

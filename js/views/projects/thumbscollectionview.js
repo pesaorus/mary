@@ -37,7 +37,6 @@ define(
              * @param {Object} thumb - model object
              */
             renderThumb: function( thumb ) {
-                console.log( 'New thumb' );
                 var thumbView = new ThumbView({
                         model: thumb
                     });
@@ -46,7 +45,7 @@ define(
             },
 
             initialize: function() {
-                this.collection = new ThumbsCollection( App.models );
+                this.collection = new ThumbsCollection( App.models.modelsCollection );
             }
         });
 

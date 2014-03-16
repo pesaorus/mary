@@ -125,7 +125,6 @@ define(
             },
 
             renderNewCurrentIndex: function( index ) {
-                console.log( 'New index', index );
                 var newIndexText = index < 10 ? '0' + index : index;
                 this.$currtntImageIndexContainer.html( newIndexText );
             }

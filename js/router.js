@@ -32,14 +32,15 @@ define(
       },
 
       showProject: function( id ) {
-        var $currentMenuItem = $( App.views.mainNavigation.$menuItems[ 0 ] );
+        var $currentMenuItem = $( App.views.mainNavigation.$menuItems[ 0 ] ),
+            currentModel = App.models.getModel( parseInt(id) );
+
         App.views.mainNavigation.selectRoutedMenuItem( $currentMenuItem );
 
         /**
-         * Getting project by array index is just a temporary solution.
-         * TODO: add templates cashing.
+         * TODO: add templates caching.
          */
-        App.views.projects[ id ] = new ProjectView( { model: new ProjectModel(App.models[ id - 1 ]) } );
+        App.views.projects[ id ] = new ProjectView( { model: new ProjectModel( currentModel ) } );
         App.views.projects[ id ].render();
       },
 

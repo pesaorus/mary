@@ -1,6 +1,7 @@
 {
     "data": [
         {
+            "id": 1,
             "imagePreview": "images/projects/sber/Sber_prew.png",
             "thumbTitle": "Vector Icons",
             "thumbText": "Vector icon design for the Sberbank Online promotional site",
@@ -15,6 +16,7 @@
             "tags": ["Icon design"]
         },
         {
+            "id":2,
             "imagePreview": "images/projects/cicles/Cicles_prew.png",
             "thumbTitle": "Circle-style illustration",
             "thumbText": "Trying of a new style of illustration",
@@ -31,6 +33,7 @@
             "tags": ["Vector Illustration"]
         },
         {
+            "id": 3,
             "imagePreview": "images/projects/sber/Sber_prew.png",
             "thumbTitle": "Third image",
             "thumbText": "Third project with 25 images inside"
