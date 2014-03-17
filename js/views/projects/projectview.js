@@ -18,7 +18,11 @@ define(
             template: Handlebars.compile( projectViewTpl ),
             currentImageIndex: 1,
 
-            render: function() { 
+            initialize: function() {
+                _.bindAll(this, 'scrollFullViewToTheLeft', 'scrollFullViewToTheRight', 'renderNewCurrentIndex');
+            },
+
+            render: function() {
 
                 var imagesCount = this.model.get('imagesList').length,
                     data = {
