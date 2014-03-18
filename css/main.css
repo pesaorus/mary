@@ -221,7 +221,7 @@ nav li {
 
 .scroller {
     position: absolute;
-    right:40px; bottom: 40px;
+    right:40px; bottom: 30px;
     min-width: 150px;
 }
 
@@ -231,11 +231,11 @@ nav li {
 }
 
 .scroll-left {
-    width:50px;
+    width:30px;
 }
 
 .scroll-right {
-    width: 50px;
+    width: 30px;
     text-align: right;
 }
 
@@ -308,6 +308,17 @@ nav li {
 /*  medis screen part */
 @media screen and (max-width: 860px) {
     .thumb {width:50%}
+
+    .scroller {
+        position: static;
+        min-width: 150px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .grid-right {
+        width:100%;
+    }
 }
 
 
