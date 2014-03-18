@@ -305,7 +305,15 @@ nav li {
 
 
 
+
+
+
 /*  medis screen part */
+
+@media screen and (min-width: 1600px) {
+    .thumb {width:25%}
+}
+
 @media screen and (max-width: 860px) {
     .thumb {width:50%}
 

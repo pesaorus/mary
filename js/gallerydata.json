@@ -37,6 +37,12 @@
             "imagePreview": "images/projects/sber/Sber_prew.png",
             "thumbTitle": "Third image",
             "thumbText": "Third project with 25 images inside"
+        },
+        {
+            "id": 4,
+            "imagePreview": "images/projects/sber/Sber_prew.png",
+            "thumbTitle": "Third image",
+            "thumbText": "Third project with 25 images inside"
         }
     ]
 }
