@@ -75,7 +75,7 @@ define(
 
             /* Render method */
             render: function() {
-                console.log( 'menu rendered' );
+                //console.log( 'menu rendered' );
             }
         });
 

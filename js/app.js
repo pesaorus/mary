@@ -60,7 +60,7 @@ require(
          */
         $.get('js/gallerydata.json', function(resp) {
 
-            App.models.modelsCollection = resp.data;
+            App.collections.modelsList = resp.data;
 
         }).then(function() {
 
@@ -75,7 +75,7 @@ require(
              * Creating projects collection.
              * In future wi will get separate project from thumbs list.
              */
-            App.collections.projectsCollection = new ProjectsCollection( App.models.modelsCollection );
+            App.collections.projectsCollection = new ProjectsCollection( App.collections.modelsList );
 
             /**
              * Creating thumbnails collection view.
