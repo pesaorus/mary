@@ -54,38 +54,41 @@ require(
         App.elements.$contentContainer = $('#content');
 
         /**
-         * All data (models) to draw main page
-         * is stored in 'js/gallerydata.json' file.
-         * We will place it in App.models object.
+         * Static views.
          */
-        $.get('js/gallerydata.json', function(resp) {
+        App.views.aboutView = aboutView;
+        App.views.contactsView = contactsView;
+        App.views.mainNavigation = mainNavigation;
 
-            App.collections.modelsList = resp.data;
+        /**
+         * Creating projects collection.
+         * In future wi will get separate project from projectsCollection list.
+         */
+        App.collections.projectsCollection = new ProjectsCollection();
 
-        }).then(function() {
+        /**
+         * Fetching projects list from 'js/gallerydata.json' and then we can
+         * create thumbs collection and initialize router.
+         */
+        App.collections.projectsCollection.fetch({
+            success: function() {
+                /**
+                 * Creating thumbnails collection view.
+                 */
+                App.views.thumbCollectionView = new ThumbCollectionView;
 
-            /**
-             * Static views.
-             */
-            App.views.aboutView = aboutView;
-            App.views.contactsView = contactsView;
-            App.views.mainNavigation = mainNavigation;
+                /**
+                 * Router initialization.
+                 */
+                router.initialize();
+            },
 
-            /**
-             * Creating projects collection.
-             * In future wi will get separate project from thumbs list.
-             */
-            App.collections.projectsCollection = new ProjectsCollection( App.collections.modelsList );
-
-            /**
-             * Creating thumbnails collection view.
-             */
-            App.views.thumbCollectionView = new ThumbCollectionView;
-
-            /**
-             * Router initialization.
-             */
-            router.initialize();
+            error: function() {
+                console.error('Fetching error occured.');
+            }
         });
+
+            
+
     }
 );

@@ -1,58 +1,56 @@
-{
-    "data": [
-        {
-            "id": 1,
-            "imagePreview": "images/projects/sber/Sber_prew.png",
-            "thumbTitle": "Vector Icons",
-            "thumbText": "Vector icon design for the Sberbank Online promotional site",
-            "imagesList": [
-                    "images/projects/sber/Sber_1.png",
-                    "images/projects/sber/Sber_2.png",
-                    "images/projects/sber/Sber_3.png"
-                ],
-            "title": "Sberbank Online",
-            "text": "The promotional site for Sberbank Online. The goal of it is to introduce the benefits of online payments instead of staying in queues.<br>(Web designed by the Art Director)",
-            "tools": ["Adobe Illustrator CS 5.5"],
-            "tags": ["Icon design"]
-        },
-        {
-            "id":2,
-            "imagePreview": "images/projects/cicles/Cicles_prew.png",
-            "thumbTitle": "Circle-style illustration",
-            "thumbText": "Trying of a new style of illustration",
-            "imagesList": [
-                    "images/projects/cicles/Cicles_1.png",
-                    "images/projects/cicles/Cicles_2.png",
-                    "images/projects/cicles/Cicles_3.png",
-                    "images/projects/cicles/Cicles_4.png",
-                    "images/projects/cicles/Cicles_5.png"
-                ],
-            "title": "New style",
-            "text": "This series of pictures are just made in training of the new style of illustration. The example is here.",
-            "tools": ["Adobe Illustrator CS 5.5", "Adobe Photoshop CS 5.5"],
-            "tags": ["Vector Illustration"]
-        },
-        {
-            "id": 3,
-            "imagePreview": "images/projects/sber/Sber_prew.png",
-            "thumbTitle": "Third image",
-            "thumbText": "Third project with 25 images inside",
-            "imagesList":[],
-            "title": "No title",
-            "text": "There is no such project",
-            "tools": [],
-            "tags": []
-        },
-        {
-            "id": 4,
-            "imagePreview": "images/projects/sber/Sber_prew.png",
-            "thumbTitle": "Fourth image",
-            "thumbText": "Fourth project with 25 images inside",
-            "imagesList":[],
-            "title": "No title",
-            "text": "There is no such project",
-            "tools": [],
-            "tags": []
-        }
-    ]
-}
+[
+    {
+        "id": 1,
+        "imagePreview": "images/projects/sber/Sber_prew.png",
+        "thumbTitle": "Vector Icons",
+        "thumbText": "Vector icon design for the Sberbank Online promotional site",
+        "imagesList": [
+                "images/projects/sber/Sber_1.png",
+                "images/projects/sber/Sber_2.png",
+                "images/projects/sber/Sber_3.png"
+            ],
+        "title": "Sberbank Online",
+        "text": "The promotional site for Sberbank Online. The goal of it is to introduce the benefits of online payments instead of staying in queues.<br>(Web designed by the Art Director)",
+        "tools": ["Adobe Illustrator CS 5.5"],
+        "tags": ["Icon design"]
+    },
+    {
+        "id":2,
+        "imagePreview": "images/projects/cicles/Cicles_prew.png",
+        "thumbTitle": "Circle-style illustration",
+        "thumbText": "Trying of a new style of illustration",
+        "imagesList": [
+                "images/projects/cicles/Cicles_1.png",
+                "images/projects/cicles/Cicles_2.png",
+                "images/projects/cicles/Cicles_3.png",
+                "images/projects/cicles/Cicles_4.png",
+                "images/projects/cicles/Cicles_5.png"
+            ],
+        "title": "New style",
+        "text": "This series of pictures are just made in training of the new style of illustration. The example is here.",
+        "tools": ["Adobe Illustrator CS 5.5", "Adobe Photoshop CS 5.5"],
+        "tags": ["Vector Illustration"]
+    },
+    {
+        "id": 3,
+        "imagePreview": "images/projects/sber/Sber_prew.png",
+        "thumbTitle": "Third image",
+        "thumbText": "Third project with 25 images inside",
+        "imagesList":[],
+        "title": "No title",
+        "text": "There is no such project",
+        "tools": [],
+        "tags": []
+    },
+    {
+        "id": 4,
+        "imagePreview": "images/projects/sber/Sber_prew.png",
+        "thumbTitle": "Fourth image",
+        "thumbText": "Fourth project with 25 images inside",
+        "imagesList":[],
+        "title": "No title",
+        "text": "There is no such project",
+        "tools": [],
+        "tags": []
+    }
+]

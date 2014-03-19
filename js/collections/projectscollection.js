@@ -12,7 +12,8 @@ define(
 
     function( _, $, Backbone, thumbModel ) {
         var ProjectsCollection = Backbone.Collection.extend({
-                model: thumbModel
+                model: thumbModel,
+                url: 'js/gallerydata.json'
             });
 
         return ProjectsCollection;
