@@ -30,9 +30,10 @@ require(
         'views/contacts/contactsview',
         'views/mainnavigation',
         'views/projects/thumbscollectionview',
+        'collections/thumbscollection',
         'router'
     ],
-    function( $, aboutView, contactsView, mainNavigation, ThumbCollectionView, router ) {
+    function( $, aboutView, contactsView, mainNavigation, ThumbCollectionView, ThumbsCollection, router ) {
 
         /**
          * New Application namespace
@@ -53,20 +54,6 @@ require(
         App.elements.$contentContainer = $('#content');
 
         /**
-         * Method to get model by id.
-         * @param  {Number} id - model id.
-         * @return {Onject} - model.
-         */
-        App.models.getModel = function( id ) {
-            var idToReturn = id,
-                modelToReturn =  _.find( App.models.modelsCollection, function( model ) {
-                    return model.id === idToReturn;
-                });
-
-            return modelToReturn;
-        }
-
-        /**
          * All data (models) to draw main page
          * is stored in 'js/gallerydata.json' file.
          * We will place it in App.models object.
@@ -85,7 +72,13 @@ require(
             App.views.mainNavigation = mainNavigation;
 
             /**
-             * Creating thumbnailc collection.
+             * Creating projects collection.
+             * In future wi will get separate project from thumbs list.
+             */
+            App.collections.projectsCollection = new ThumbsCollection( App.models.modelsCollection );
+
+            /**
+             * Creating thumbnails collection view.
              */
             App.views.thumbCollectionView = new ThumbCollectionView;
 

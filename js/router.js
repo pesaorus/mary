@@ -31,19 +31,24 @@ define(
         '*actions': 'defaultRoute'
       },
 
+      /* Current project page with legend and slider */
       showProject: function( id ) {
         var $currentMenuItem = $( App.views.mainNavigation.$menuItems[ 0 ] ),
-            currentModel = App.models.getModel( parseInt(id) );
+
+            /* If there is no such project we will show default 'no such project' page (~404) */
+            currentProjectModel = App.collections.projectsCollection.get( id ) || new ProjectModel({});
 
         App.views.mainNavigation.selectRoutedMenuItem( $currentMenuItem );
 
         /**
          * TODO: add templates caching.
          */
-        App.views.projects[ id ] = new ProjectView( { model: new ProjectModel( currentModel ) } );
+        App.views.projects[ id ] = new ProjectView( { model: currentProjectModel } );
+        
         App.views.projects[ id ].render();
       },
 
+      /* Page with contacts */
       showContacts: function() {
         var $currentMenuItem = $( App.views.mainNavigation.$menuItems[ 2 ] );
 
@@ -51,6 +56,7 @@ define(
         App.views.mainNavigation.selectRoutedMenuItem( $currentMenuItem );
       },
 
+      /* About page */
       showAbout: function() {
         var $currentMenuItem = $( App.views.mainNavigation.$menuItems[ 1 ] );
         App.views.mainNavigation.selectRoutedMenuItem( $currentMenuItem );
@@ -58,6 +64,7 @@ define(
         App.views.aboutView.render();
       },
 
+      /* Main page with projects list */
       defaultRoute: function( actions ) {
         var $currentMenuItem = $( App.views.mainNavigation.$menuItems[ 0 ] );
         App.views.mainNavigation.selectRoutedMenuItem( $currentMenuItem );

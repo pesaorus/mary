@@ -6,11 +6,10 @@ define(
         'underscore',
         'jquery',
         'backbone',
-        'views/projects/thumbview',
-        'collections/thumbscollection'
+        'views/projects/thumbview'
     ],
 
-    function( _, $, Backbone, ThumbView, ThumbsCollection ) {
+    function( _, $, Backbone, ThumbView ) {
         var ThumbsListView = Backbone.View.extend({
             tagName: 'div',
             className: 'projects-list',
@@ -45,7 +44,7 @@ define(
             },
 
             initialize: function() {
-                this.collection = new ThumbsCollection( App.models.modelsCollection );
+                this.collection = App.collections.projectsCollection;
             }
         });
 

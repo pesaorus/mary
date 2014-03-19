@@ -36,13 +36,23 @@
             "id": 3,
             "imagePreview": "images/projects/sber/Sber_prew.png",
             "thumbTitle": "Third image",
-            "thumbText": "Third project with 25 images inside"
+            "thumbText": "Third project with 25 images inside",
+            "imagesList":[],
+            "title": "No title",
+            "text": "There is no such project",
+            "tools": [],
+            "tags": []
         },
         {
             "id": 4,
             "imagePreview": "images/projects/sber/Sber_prew.png",
-            "thumbTitle": "Third image",
-            "thumbText": "Third project with 25 images inside"
+            "thumbTitle": "Fourth image",
+            "thumbText": "Fourth project with 25 images inside",
+            "imagesList":[],
+            "title": "No title",
+            "text": "There is no such project",
+            "tools": [],
+            "tags": []
         }
     ]
 }

@@ -10,6 +10,7 @@ define(
     function( Backbone ) {
         var ProjectModel = Backbone.Model.extend({
                 defaults: {
+                    id: 0, // 404 - no such project id
                     imagesList: [
                         'images/projects/sber/Sber_1.png'
                     ],
