@@ -30,10 +30,10 @@ require(
         'views/contacts/contactsview',
         'views/mainnavigation',
         'views/projects/thumbscollectionview',
-        'collections/thumbscollection',
+        'collections/projectscollection',
         'router'
     ],
-    function( $, aboutView, contactsView, mainNavigation, ThumbCollectionView, ThumbsCollection, router ) {
+    function( $, aboutView, contactsView, mainNavigation, ThumbCollectionView, ProjectsCollection, router ) {
 
         /**
          * New Application namespace
@@ -75,7 +75,7 @@ require(
              * Creating projects collection.
              * In future wi will get separate project from thumbs list.
              */
-            App.collections.projectsCollection = new ThumbsCollection( App.models.modelsCollection );
+            App.collections.projectsCollection = new ProjectsCollection( App.models.modelsCollection );
 
             /**
              * Creating thumbnails collection view.

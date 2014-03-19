@@ -11,9 +11,9 @@ define(
     ],
 
     function( _, $, Backbone, thumbModel ) {
-        var ThumbsCollection = Backbone.Collection.extend({
+        var ProjectsCollection = Backbone.Collection.extend({
                 model: thumbModel
             });
 
-        return ThumbsCollection;
+        return ProjectsCollection;
     });
