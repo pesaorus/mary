@@ -1,5 +1,5 @@
 /**
- * About paje view.
+ * About page view.
  */
 define(
     [

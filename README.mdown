@@ -1,0 +1,40 @@
+# About
+
+Simple portfolio single page application.
+
+## Main libraries and dependencies
+
+- jquery (2.1.0)
+- underscore (1.6.0)
+- backbone (1.1.2)
+- handlebars (1.1.2)
+- requirejs (2.1.11) (+ text.js)
+
+## Building and minifying
+
+'build.js' file is an r.js config.
+
+Full 'build.js' example you can find here: <https://github.com/jrburke/r.js/blob/master/build/example.build.js>
+
+### Project building
+
+All commands should be executed from 'js/' directory.
+
+#### Building and minifying JS
+
+ 'app.js' to 'app-built.js':
+
+```
+node ../r.js -o ../build.js
+```
+
+#### Minifying CSS
+
+ 'main.css' to 'main-min.css':
+
+```
+node ../r.js -o optimizeCss=ctandard cssIn=../css/main.css out=../css/main-min.css
+```
+
+Then css and js paths (to app) in 'index.html' should be changed to new (main-min.css and app-built.js) versions.
+ 

@@ -1,5 +1,5 @@
 /**
- * Contacts paje view.
+ * Contacts page view.
  */
 define(
     [

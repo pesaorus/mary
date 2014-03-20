@@ -40,12 +40,12 @@ define(
 
         App.views.mainNavigation.selectRoutedMenuItem( $currentMenuItem );
 
-        /**
-         * TODO: add templates caching.
-         */
-        App.views.projects[ id ] = new ProjectView( { model: currentProjectModel } );
+        /* If there is another project view, we will remove it */
+        if (App.views.projects.currentProject) App.views.projects.currentProject.remove();
         
-        App.views.projects[ id ].render();
+        /* and create new project view */
+        App.views.projects.currentProject = new ProjectView( { model: currentProjectModel } );
+        App.views.projects.currentProject.render();
       },
 
       /* Page with contacts */
