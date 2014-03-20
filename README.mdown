@@ -1,6 +1,6 @@
 # About
 
-Simple portfolio single page application.
+Simple designer's portfolio. Single page application.
 
 ## Main libraries and dependencies
 
