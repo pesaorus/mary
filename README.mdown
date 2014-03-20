@@ -10,6 +10,19 @@ Simple portfolio single page application.
 - handlebars (1.1.2)
 - requirejs (2.1.11) (+ text.js)
 
+## Server.js
+
+'server.js' is a very simple node server to enforce AJAX work.
+To use it:
+```
+node install
+...
+node server.js
+```
+
+Then you can find project at http://localhost:8080/index.html
+
+
 ## Building and minifying
 
 'build.js' file is an r.js config.
@@ -22,7 +35,7 @@ All commands should be executed from 'js/' directory.
 
 #### Building and minifying JS
 
- 'app.js' to 'app-built.js':
+'app.js' to 'app-built.js':
 
 ```
 node ../r.js -o ../build.js
@@ -30,7 +43,7 @@ node ../r.js -o ../build.js
 
 #### Minifying CSS
 
- 'main.css' to 'main-min.css':
+'main.css' to 'main-min.css':
 
 ```
 node ../r.js -o optimizeCss=ctandard cssIn=../css/main.css out=../css/main-min.css
