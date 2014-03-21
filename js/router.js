@@ -31,7 +31,11 @@ define(
         '*actions': 'defaultRoute'
       },
 
-      /* Current project page with legend and slider */
+      /** 
+       * Current project page with legend and slider.
+       *
+       * TODO: add projects cacheing.
+       */
       showProject: function( id ) {
         var $currentMenuItem = $( App.views.mainNavigation.$menuItems[ 0 ] ),
 

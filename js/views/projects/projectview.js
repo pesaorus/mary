@@ -66,9 +66,9 @@ define(
             },
 
             scrollFullViewToTheLeft: function(e) {
-                var $currentImage = $('.full-view-container .visible');
+                var $currentImageContainer = $('.full-view-container .visible');
 
-                if ( $currentImage.prev().length ) {
+                if ( $currentImageContainer.prev().length ) {
 
                     /**
                      * Restoring opacity of the 'right' arrow
@@ -77,7 +77,7 @@ define(
                         opacity: 1
                     });
 
-                    $currentImage
+                    $currentImageContainer
                         .removeClass('visible')
                         .addClass('hidden')
                         .prev()
@@ -87,7 +87,7 @@ define(
                     this.currentImageIndex--;
                     this.renderNewCurrentIndex( this.currentImageIndex );
 
-                    if ( !$currentImage.prev().prev().length ) {
+                    if ( !$currentImageContainer.prev().prev().length ) {
                         this.$scrollLeftContainer.css({
                             opacity: 0.3
                         });
@@ -98,9 +98,37 @@ define(
             },
 
             scrollFullViewToTheRight: function(e) {
-                var $currentImage = $('.full-view-container .visible');
+                var $currentImage = $('.full-view-container .visible'),
+                    currtneImageHeight = $currentImage.height();
 
                 if ( $currentImage.next().length ) {
+                    var $nextImageContainer =  $currentImage.next();
+
+                    /**
+                     * Images loading on demand.
+                     *
+                     * TODO: make preloader
+                     */
+                    if ( $( $nextImageContainer.find('img')[0] ).data('src') ) {
+
+                        var $nextImage = $( $nextImageContainer.find('img')[0] ),
+                            nextImageSrc = $nextImage.data('src'),
+                            lazyImageLoad = new Image();
+
+                        /* Save block height */
+                        $nextImageContainer.height( currtneImageHeight + 'px' );
+
+                        lazyImageLoad.src = nextImageSrc;
+
+                        lazyImageLoad.onload = function() {
+                            var newImg = $(this);
+
+                            $nextImageContainer.html( newImg );
+
+                            /* Reset container height to provide full image autosizing */
+                            $nextImageContainer.height( 'auto' );
+                        };
+                    }
 
                     /**
                      * Restoring opacity of the 'left' arrow
@@ -109,12 +137,17 @@ define(
                         opacity: 1
                     });
 
+                    /**
+                     * Show next image container.
+                     */
                     $currentImage
                         .removeClass('visible')
-                        .addClass('hidden')
-                        .next()
-                            .removeClass('hidden')
-                            .addClass('visible');
+                        .addClass('hidden');
+                    
+                    $nextImageContainer
+                        .removeClass('hidden')
+                        .addClass('visible');
+
                     this.currentImageIndex++;
                     this.renderNewCurrentIndex( this.currentImageIndex );
 
