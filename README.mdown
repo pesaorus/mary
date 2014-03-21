@@ -15,7 +15,7 @@ Simple designer's portfolio. Single page application.
 'server.js' is a very simple node server to enforce AJAX work.
 To use it:
 ```
-node install
+npm install connect
 ...
 node server.js
 ```
