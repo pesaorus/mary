@@ -1,6 +1,22 @@
 [
     {
         "id": 1,
+        "imagePreview": "images/projects/t-shirts/Check-in_prew.png",
+        "thumbTitle": "Illustrations for t-shirts",
+        "thumbText": "A range of illustrations in different styles",
+        "imagesList":[
+                "images/projects/t-shirts/Check-in.png",
+                "images/projects/t-shirts/Monster_music.png",
+                "images/projects/t-shirts/Monster_coffee.png",
+                "images/projects/t-shirts/Brasil.png"
+            ],
+        "title": "T-shirt illustratione",
+        "text": "These illustrations were created for participating at the competition at the <a href='www.threadless.com'>www.threadless.com</a>.",
+        "tools": ["Adobe Illustrator CS 5.5"],
+        "tags": ["Illustration"]
+    },
+    {
+        "id": 2,
         "imagePreview": "images/projects/sber/Sber_prew.png",
         "thumbTitle": "Vector Icons",
         "thumbText": "Vector icon design for the Sberbank Online promotional site",
@@ -15,7 +31,7 @@
         "tags": ["Icon design"]
     },
     {
-        "id":2,
+        "id":3,
         "imagePreview": "images/projects/cicles/Cicles_prew.png",
         "thumbTitle": "Circle-style illustration",
         "thumbText": "Trying of a new style of illustration",
@@ -32,18 +48,23 @@
         "tags": ["Vector Illustration"]
     },
     {
-        "id": 3,
-        "imagePreview": "images/projects/sber/Sber_prew.png",
-        "thumbTitle": "Third image",
-        "thumbText": "Third project with 25 images inside",
-        "imagesList":[],
-        "title": "No title",
-        "text": "There is no such project",
-        "tools": [],
-        "tags": []
+        "id": 4,
+        "imagePreview": "images/projects/gnome/gnome_prew.jpg",
+        "thumbTitle": "Corporate calendar",
+        "thumbText": "Corporate calendar design and illustration",
+        "imagesList":[
+                "images/projects/gnome/gnome_1.jpg",
+                "images/projects/gnome/gnome_2.jpg",
+                "images/projects/gnome/gnome_3.jpg",
+                "images/projects/gnome/gnome_4.jpg"
+            ],
+        "title": "Corporate calendar",
+        "text": "Design and illustrations for corporate calendar. One Agile Advertising agency.",
+        "tools": ["Adobe Illustratior", "Photoshop CS 5.5"],
+        "tags": ["Calendar design and illustration"]
     },
     {
-        "id": 4,
+        "id": 5,
         "imagePreview": "images/projects/sber/Sber_prew.png",
         "thumbTitle": "Fourth image",
         "thumbText": "Fourth project with 25 images inside",

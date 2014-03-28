@@ -65,6 +65,16 @@ define(
                 'click .full-view-container': 'scrollFullViewToTheRight'
             },
 
+            /**
+             * Completly destroy the view
+             */
+            destroyView: function() {
+                this.undelegateEvents();
+                this.$el.removeData().unbind();
+                this.remove();
+                Backbone.View.prototype.remove.call(this);
+            },
+
             scrollFullViewToTheLeft: function(e) {
                 var $currentImageContainer = $('.full-view-container .visible');
 

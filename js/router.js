@@ -45,7 +45,7 @@ define(
         App.views.mainNavigation.selectRoutedMenuItem( $currentMenuItem );
 
         /* If there is another project view, we will remove it */
-        if (App.views.projects.currentProject) App.views.projects.currentProject.remove();
+        if (App.views.projects.currentProject) App.views.projects.currentProject.destroyView();
         
         /* and create new project view */
         App.views.projects.currentProject = new ProjectView( { model: currentProjectModel } );
